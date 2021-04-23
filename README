@@ -1,5 +1,5 @@
 
-#Random Twitter Quotes!
+# Random Twitter Quotes!
 
 A simple HTML page where I used some JS to fetch random Twitter Quotes(and their authors) from https://type.fit/api/quotes 
 using Promises(async...await)and added some basic css for styling and animations. Tweet Button refers 
