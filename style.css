@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0%;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right top, white, blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-box {
+  display: flex;
+  z-index: 3;
+  flex-direction: column;
+
+  min-height: 50vh;
+  min-width: 40vw;
+  max-width: 50vw;
+  border-radius: 25px;
+  background: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 30%),
+    rgba(255, 255, 255, 10%)
+  );
+}
+
+.quote {
+  text-align: center;
+  flex: 2;
+  font-family: fantasy;
+}
+.quote-title {
+  padding: 5%;
+  border-radius: 25px 25px 0 0;
+  background: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 30%),
+    rgba(255, 255, 255, 10%)
+  );
+  font-style: italic;
+  font-size: 3rem;
+}
+
+#text {
+  margin: 5%;
+  font-size: 2rem;
+}
+
+#author {
+  font-size: 1rem;
+  font-family: cursive;
+  float: right;
+  padding: 5%;
+}
+
+.buttons {
+  border-radius: 0px 0px 25px 25px;
+  width: 100%;
+  flex: 1;
+  background: linear-gradient(
+    50deg,
+    rgba(0, 255, 255, 30%),
+    rgba(120, 255, 255, 50%)
+  );
+}
+a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid white;
+  background-color: tomato;
+}
+
+#tweet-quote {
+  float: left;
+  font-size: 2rem;
+}
+#new-quote {
+  float: right;
+  font-size: 2rem;
+}
+
+.circle1,
+.circle2 {
+  background: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(0, 0, 255, 0.1)
+  );
+  height: 10rem;
+  width: 10rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 {
+  top: 3%;
+  left: 10%;
+  opacity: 30%;
+  animation-name: movement;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.circle2 {
+  bottom: 3%;
+  right: 10%;
+  animation-name: opposite-movement;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  #tweet-quote {
+    font-size: 1rem;
+  }
+  #new-quote {
+    font-size: 1rem;
+    float: right;
+  }
+  .quote-title {
+    font-size: 2rem;
+  }
+  #text {
+    font-size: 1.7rem;
+  }
+}
+
+@keyframes movement {
+  25% {
+    left: 40%;
+    opacity: 80%;
+  }
+  50% {
+    left: 80%;
+    opacity: 0%;
+  }
+  70% {
+    left: 50%;
+    opacity: 60%;
+  }
+  100% {
+    left: 10%;
+    opacity: 20%;
+  }
+}
+
+@keyframes opposite-movement {
+  25% {
+    right: 40%;
+    opacity: 80%;
+  }
+  50% {
+    right: 80%;
+    opacity: 0%;
+  }
+  70% {
+    right: 50%;
+    opacity: 60%;
+  }
+  100% {
+    right: 10%;
+    opacity: 20%;
+  }
+}
