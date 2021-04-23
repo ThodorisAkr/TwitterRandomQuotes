@@ -89,7 +89,7 @@ a {
 .circle2 {
   background: linear-gradient(
     50deg,
-    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.7),
     rgba(0, 0, 255, 0.1)
   );
   height: 10rem;
